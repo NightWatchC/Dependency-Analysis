@@ -1,0 +1,26 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run analyzer",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/CodeAnalyzer/analyzer.py",
+            "args": [
+                "C:\\Users\\NightWatch\\Desktop\\spatial_mobility_replication", 
+                "--file-type", ".R, .cpp",  // Specify the file types to analyze
+                "--api-key", "", "--base-url", "https://api.deepseek.com/v1", 
+                "--model-name", "deepseek-chat",
+                "--max-tokens","4096",
+                "--retries","5",
+                "--retry-delay","2.0", // temperature is set to 0.0 for deterministic output inside the core_func.py
+                "--per-file-output","C:\\Users\\NightWatch\\Desktop\\spatial_mobility_replication\\per_file_summary.json",
+                "--dependency-output","C:\\Users\\NightWatch\\Desktop\\spatial_mobility_replication\\dependency_report.json",
+                "--log-level","INFO"
+            ]
+        }
+    ]
+}

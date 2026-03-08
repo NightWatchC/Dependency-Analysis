@@ -1,0 +1,5 @@
+- This project is for sending all scripts in a folder to LLM and let it analyse the dependency relationships (including function and I\O files-flow dependencies) among scripts.
+- I hope that it could eventually tell the user (and it'd better output a plot that records these relationships) how does these scripts cite each other's functions, and how does I\O files flow among different scripts, e.g.:
+  - script A defines function a, and function a is used by script B; script B defines function b which is used by script C
+  - script A loads dataset DA, add some structures(variables, vectors, matrices, tensors and etc.) into it and saves new dataset as DB; script B loads DB and also alter its structure, but does not "save as" DB with other names, just "save it"; at last DB is used by script C
+- I would also hope that this project could infer some "least" strutures in specific datasets. For instance, I would like this project infer that there must be some structures in DB (though it is impossible that LLM know the structure of DA from the code) since script A had written code to add these structures to DB.
