@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 - This project is for sending all scripts in a folder to LLM and let it analyse the dependency relationships (including function and I\O files-flow dependencies) among scripts.
 - I hope that it could eventually tell the user (and it'd better output a plot that records these relationships) how does these scripts cite each other's functions, and how does I\O files flow among different scripts, e.g.:
   - script A defines function a, and function a is used by script B; script B defines function b which is used by script C
